@@ -1,0 +1,4 @@
+#!/system/bin/sh
+
+# This is a placeholder for the update-binary script
+# Magisk will handle most of the installation process
