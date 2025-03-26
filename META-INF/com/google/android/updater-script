@@ -1,0 +1,17 @@
+show_progress(0.1, 10);
+ui_print("******************************************");
+ui_print(" Magisk Module: Kernel Tweak Module ");
+ui_print("******************************************");
+
+# Mount the system partition
+mount("ext4", "EMMC", "/dev/block/bootdevice/by-name/system", "/system");
+
+# Run the service script
+run_program("/system/bin/sh", "/common/service.sh");
+
+ui_print("******************************************");
+ui_print(" Installation Complete! ");
+ui_print("******************************************");
+
+# Unmount the system partition
+unmount("/system");
