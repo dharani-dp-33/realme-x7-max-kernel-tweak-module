@@ -1,0 +1,6 @@
+id=my.kernel.tweak.module
+name=Kernel Tweak Module
+version=1.0
+versionCode=1
+author=dharani-dp-33
+description=Magisk module to apply kernel-level performance tweaks for Realme X7 Max.
