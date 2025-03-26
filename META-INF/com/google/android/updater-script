@@ -1,17 +1,20 @@
-show_progress(0.1, 10);
-ui_print("******************************************");
-ui_print(" Magisk Module: Kernel Tweak Module ");
-ui_print("******************************************");
+#!/system/bin/sh
 
-# Mount the system partition
-mount("ext4", "EMMC", "/dev/block/bootdevice/by-name/system", "/system");
+# Magisk module installation script
+# This script will run our config.sh to set up the module
 
-# Run the service script
-run_program("/system/bin/sh", "/common/service.sh");
+# Print a message to the user
+ui_print() {
+  echo -e "ui_print $1\nui_print\n" > $OUTFD
+}
 
-ui_print("******************************************");
-ui_print(" Installation Complete! ");
-ui_print("******************************************");
+ui_print "****************************************"
+ui_print "   Installing Performance Mode Module   "
+ui_print "****************************************"
 
-# Unmount the system partition
-unmount("/system");
+# Run the config.sh script
+sh /common/config.sh
+
+ui_print "****************************************"
+ui_print "   Installation Complete!               "
+ui_print "****************************************"
