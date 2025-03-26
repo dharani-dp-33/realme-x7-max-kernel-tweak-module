@@ -1,6 +1,7 @@
-id=my.kernel.tweak.module
-name=Kernel Tweak Module
+id=your_module_id
+name=Performance and Battery Mode Switcher
 version=1.0
-versionCode=1
-author=dharani-dp-33
-description=Magisk module to apply kernel-level performance tweaks for Realme X7 Max.
+versionCode=100
+author=Your Name
+description=Magisk module to switch between performance, battery, and boost modes. Includes automatic boosting in performance mode.
+support=https://github.com/your-repo/issues
